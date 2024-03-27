@@ -1,0 +1,9 @@
+html,body{
+   background-image: url("./Components/SocialLinks/background.jpg");
+   scroll-behavior: smooth;
+}
+
+.active{
+   color: blue;
+   background-color: blue;
+}

@@ -1,0 +1,32 @@
+.image{
+    position: absolute;
+    top:-4rem
+}
+
+.content-width{
+    width: 53.37rem;
+}
+
+.btn-sumit{
+    border: 1px solid #1A1A1A;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
+
+
+
+
+@media (max-width:1200px) {
+    .content-width{
+        width: 100%
+    }
+}
+
+@media (max-width:1300px) {
+    .image{
+       top:4.8rem
+    }
+}
