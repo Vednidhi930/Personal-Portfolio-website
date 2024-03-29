@@ -1,6 +1,8 @@
 html,body{
    background-image: url("./Components/SocialLinks/background.jpg");
    scroll-behavior: smooth;
+   height: 100%;
+   width: 100%;
 }
 
 .active{

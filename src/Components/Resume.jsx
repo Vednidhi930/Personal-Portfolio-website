@@ -1,9 +1,4 @@
 import React from "react";
-import { BiLogoRedux } from "react-icons/bi";
-import { AiTwotoneAppstore } from "react-icons/ai";
-import { MdOutlineFlipCameraIos } from "react-icons/md";
-import { FaCode } from "react-icons/fa";
-import { LiaSwatchbookSolid } from "react-icons/lia";
 import { IoBookOutline } from "react-icons/io5";
 import { AiOutlineFileDone } from "react-icons/ai";
 import "../Components/Global.css";
@@ -11,7 +6,7 @@ import "../Components/Global.css";
 const Resume = ({bgcolor,darkmode}) => {
   return (
     <>
-      <div className="about p-3 relative top-28 aboutus">
+      <div className="about p-3 relative aboutus">
         <div className={`content-width ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
           <h1  className={`text-3xl font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`} >Resume</h1>
 
@@ -32,20 +27,20 @@ const Resume = ({bgcolor,darkmode}) => {
 
             <div
               className="ui-ux-design w-80 flex flex-col gap-2 p-4 rounded-lg"
-              style={{background:`${bgcolor==="white" ? "#FFF4F4" :"black"}`,  border:`${bgcolor==="white" ? "none" :"1px solid #A6A6A6"}`}}
+              style={{background:`${bgcolor==="white" ? "#EEF5FA" :"black"}`,  border:`${bgcolor==="white" ? "none" :"1px solid #A6A6A6"}`}}
             >
               <p  style={{ color: `${bgcolor==="white" ? "#000000" : "#A6A6A6"}`}}  >2019-2020</p>
-              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "white"}`}}>12th Class in Non-Med,Mother Phoola Sr.Sec School</h1>
-              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "#A6A6A6"}`}}>Maraut,Jhajjar(Haryana)</h1>
+              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "white"}`}}>12th Class in Shivhari KSV School</h1>
+              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "#A6A6A6"}`}}>Kadi,Mehsana(Gujarat)</h1>
             </div>
 
             <div
               className="ui-ux-design w-80 flex flex-col gap-2 p-4 rounded-lg"
               style={{background:`${bgcolor==="white" ? "#FFF4F4" :"black"}`,  border:`${bgcolor==="white" ? "none" :"1px solid #A6A6A6"}`}}
             >
-              <p  style={{ color: `${bgcolor==="white" ? "#000000" : "#A6A6A6"}`}}  >2018-2019</p>
-              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "white"}`}}>10th Class,RSM High School</h1>
-              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "#A6A6A6"}`}}>Talav,Jhajjar(Haryana)</h1>
+              <p  style={{ color: `${bgcolor==="white" ? "#000000" : "#A6A6A6"}`}}  >2017-2018</p>
+              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "white"}`}}>10th Class,Holy Family School</h1>
+              <h1 style={{ color: `${bgcolor==="white" ? "#000000" : "#A6A6A6"}`}}>Kadi,Mehsana(Gujarat)</h1>
             </div>
           </div>
 

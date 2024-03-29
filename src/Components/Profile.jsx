@@ -9,11 +9,12 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Anurag from "./SocialLinks/Picsart_24-03-22_23-12-27-210.png";
 import "../Components/Global.css";
-import cv from "../Components/SocialLinks/Anurag resume.pdf";
+import cv from "../Components/SocialLinks/anurag resume .pdf";
 import { FaRegUser } from "react-icons/fa";
 import { PiNotepad } from "react-icons/pi";
 import { FaLaptopCode } from "react-icons/fa";
 import { TiContacts } from "react-icons/ti";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { LiaBlogSolid } from "react-icons/lia";
 import { NavLink } from "react-router-dom";
 
@@ -91,25 +92,29 @@ const Profile = ({ show, setShow, darkmode, bgcolor }) => {
             </div>
           </NavLink>
 
-          <div
-            className="rounded-lg flex items-center p-2"
-            style={{
-              background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
-            }}
-          >
-            <LiaBlogSolid
-              className={`text-xl my-1 ${
-                bgcolor === "white" ? "text-black" : "text-white"
-              }`}
-            />
-            <h1
-              className={`text-sm my-1 ${
-                bgcolor === "white" ? "text-black" : "text-white"
-              }`}
+         
+          <NavLink to="/Certify">
+            <div
+              onClick={()=>setShow(!show)}
+              className="rounded-lg flex items-center p-2"
+              style={{
+                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
+              }}
             >
-              Blogs
-            </h1>
-          </div>
+              <AiOutlineSafetyCertificate
+                className={`text-xl my-1 ${
+                  bgcolor === "white" ? "text-black" : "text-white"
+                }`}
+              />
+              <h1
+                className={`text-sm my-1 ${
+                  bgcolor === "white" ? "text-black" : "text-white"
+                }`}
+              >
+                Certify 
+              </h1>
+            </div>
+          </NavLink>
 
           <NavLink to="/Contact">
 
@@ -140,13 +145,13 @@ const Profile = ({ show, setShow, darkmode, bgcolor }) => {
         
       ) : null}
 
-      <div className="profile w-screen h-screen flex justify-around  items-center relative top-20">
+      <div className="profile w-screen h-full flex justify-around">
         <div
-          className={`lg:w-80 sm:w-96 h-12/12 rounded-lg p-10 flex flex-col items-center gap-7 ${
+          className={`lg:w-80 sm:w-96 h-12/12 rounded-lg p-10 flex flex-col items-center relative gap-7 ${
             darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
           }`}
         >
-          <div className="w-32 rounded-lg absolute image">
+          <div className="w-32 rounded-lg  image">
             <img src={Anurag} className="w-screen rounded-lg" />
           </div>
           <h1
@@ -181,7 +186,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor }) => {
             >
               <a href="https://www.instagram.com/anurag_hr13?igsh=MWt6aXpyMHNsbXZvdw==">
                 {" "}
-                <FaInstagram className="text-2xl text-red-400  hover:text-white fw-bold" />{" "}
+                <FaInstagram className="text-2xl text-red-400   fw-bold" />{" "}
               </a>
             </div>
 
@@ -191,21 +196,25 @@ const Profile = ({ show, setShow, darkmode, bgcolor }) => {
                 background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
               }}
             >
-              <a href="https://www.instagram.com/anurag_hr13?igsh=MWt6aXpyMHNsbXZvdw==">
+              <a href="https://www.linkedin.com/in/anurag-singh-86998b28a/">
                 {" "}
-                <FaLinkedin className="text-2xl text-blue-600  hover:text-white fw-bold" />{" "}
+                <FaLinkedin className="text-2xl text-blue-600  fw-bold" />{" "}
               </a>
             </div>
 
             <div
               className="insta w-8 h-8 p-1 flex justify-center items-center rounded-lg hover:bg-blue-500  bg-slate-100"
               style={{
-                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
+                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`
               }}
             >
-              <a href="https://www.instagram.com/anurag_hr13?igsh=MWt6aXpyMHNsbXZvdw==">
+              <a href="https://github.com/AnuragSingh1630">
                 {" "}
-                <BsGithub className="text-2xl text-black  hover:text-white fw-bold" />{" "}
+                <BsGithub className="text-2xl text-black  fw-bold"
+                style={{
+                  color: `${bgcolor === "white" ? "black" : "white"}`
+                }}
+                />{" "}
               </a>
             </div>
           </div>
