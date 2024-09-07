@@ -11,8 +11,8 @@ const Navbar = ({bgcolor,darkmode}) => {
   return (
     <>
       <nav className="lg:block sm:hidden h-full">
-        <div className={`w-24 rounded-lg  ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-5 flex flex-col items-center gap-2 me-5 `}>
-          <NavLink to="/About">
+        <div className={`w-24 rounded-lg  ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-5 flex flex-col items-center gap-2 me-5`}>
+          <NavLink to="/">
             {" "}
             <div
               className="w-16 rounded-lg flex flex-col justify-center items-center p-2 bg-slate-100"
@@ -24,7 +24,7 @@ const Navbar = ({bgcolor,darkmode}) => {
             </div>{" "}
           </NavLink>
 
-          <NavLink to="/Resume">
+          {/* <NavLink to="/Resume">
             {" "}
             <div
               className="w-16  rounded-lg flex flex-col  items-center p-2"
@@ -33,7 +33,7 @@ const Navbar = ({bgcolor,darkmode}) => {
               <PiNotepad className="text-2xl" />{" "}
               <h1 className="text-sm">Resume</h1>
             </div>
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/Projects">
             <div
               className="w-16 rounded-lg flex flex-col justify-center items-center p-2"
@@ -51,7 +51,7 @@ const Navbar = ({bgcolor,darkmode}) => {
             style={{ color: `${bgcolor==="white" ? "black" : "#A6A6A6"}`, background:`${bgcolor==="white" ? "#f3f6f6" : "#1D1D1D"}`}}
           >
             <AiOutlineSafetyCertificate className="text-2xl" />
-            <h1 className="text-sm p-1">Certify</h1>
+            <h1 className="text-sm p-1">Skills</h1>
           </div>
 
           </NavLink>

@@ -1,89 +1,135 @@
-import React from 'react'
+import React from "react";
 import "../Components/Global.css";
-import project1 from "../Components/SocialLinks/e commerce ss.png"
-import project2 from "../Components/SocialLinks/portfolio project ss.png"
-import project3 from "../Components/SocialLinks/text analyzer ss.png"
-import iot from "../Components/SocialLinks/iot.png"
-import reactjs from "../Components/SocialLinks/reactjs.png"
-import webdevelopement from "../Components/SocialLinks/web developement.png"
-import htmlcssjs from "../Components/SocialLinks/html css js.png"
+import html from "../Components/SocialLinks/html.png"
+import css from "../Components/SocialLinks/social.png"
+import js from "../Components/SocialLinks/js.png"
+import react from "../Components/SocialLinks/react_original_logo_icon_146374.png"
+import nodejs from "../Components/SocialLinks/nodejs.png"
+import expressJs from "../Components/SocialLinks/express_logo_icon_248911.png"
+import mongodb from "../Components/SocialLinks/mongodb_original_logo_icon_146424.png"
+import postman from "../Components/SocialLinks/postman_macos_bigsur_icon_189815.png"
+import git from "../Components/SocialLinks/social (1).png"
+import tailwind from "../Components/SocialLinks/icons8-tailwind-css-48.png"
+import github from "../Components/SocialLinks/github.png"
+import bootstrap from "../Components/SocialLinks/icons8-bootstrap-48.png"
 
 
-const Certificate = ({bgcolor,darkmode}) => {
+const Certificate = ({ bgcolor, darkmode }) => {
+
+
+  const skills =
+  [
+    {
+      skill:"HTML",
+      png:html
+    },
+    {
+      skill:"Css",
+      png:css
+    },
+    {
+      skill:"Js",
+      png:js
+    },
+    {
+      skill:"Bootstrap",
+      png:bootstrap
+    },
+    {
+      skill:"ReactJs",
+      png:react
+    },
+    {
+      skill:"Tailwind",
+      png:tailwind
+    },
+    {
+      skill:"Nodejs",
+      png:nodejs
+    },
+    {
+      skill:"ExpressJs",
+      png:expressJs
+    },
+    {
+      skill:"MongodDb",
+      png:mongodb
+    },
+  ]
+
+  const otherSkills=
+  [
+   {
+    skill:"Git",
+    png:git
+   },
+
+   {
+    skill:"Github",
+    png:github
+   },
+   {
+    skill:"Postman",
+    png:postman
+   },
+
+  ]
+
+
   return (
     <>
-        <div className="about p-3 relative   aboutus">
-        <div className={`content-width  ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
-          <h1 className={`text-3xl font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>Certificate</h1>
+      <div
+        className={` ${
+          darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
+        } p-10 rounded-lg flex flex-col gap-10 `}
+      >
+        <h1
+          className={`text-3xl font-bold ${
+            bgcolor === "white" ? "text-black" : "text-white"
+          }`}
+        >
+          Techincal Skills
+        </h1>
 
-          <div className="flex gap-5 flex-wrap my-5">
-          <a>
-            <div
-              className="ui-ux-design w-80 flex flex-col gap-3 p-5 rounded-lg"
-              style={{background:`${bgcolor==="white" ? "#FFF4F4" :"black"}`,  border:`${bgcolor==="white" ? "none" :"1px solid #A6A6A6"}`}}
-            >
-              <img
-                src={webdevelopement}
-                className="rounded-lg transition delay-150"
-              />
-              <div>
-
-                <h1 className={`text-md font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>Internship (Web Developement)</h1>
-              </div>
-            </div>
-            </a>
-
-            <a>
-            <div
-              className="ui-ux-design w-80 flex flex-col gap-3 p-5 rounded-lg"
-              style={{background:`${bgcolor==="white" ? "#EEF5FA" :"black"}`,  border:`${bgcolor==="white" ? "none" :"1px solid #A6A6A6"}`}}
-            >
-              <img
-                src={iot}
-                className="rounded-lg transition delay-150"
-              />
-              <div>
-
-                <h1 className={`text-md font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>Internship (I I O T)</h1>
-              </div>
-            </div>
-            </a>
-            <a>
-            <div
-              className="ui-ux-design w-80 flex flex-col gap-3 p-5 rounded-lg"
-              style={{background:`${bgcolor==="white" ? "#EEF5FA" :"black"}`,  border:`${bgcolor==="white" ? "none" :"1px solid #A6A6A6"}`}}
-            >
-              <img
-                src={htmlcssjs}
-                className="rounded-lg transition delay-150"
-              />
-              <div>
-
-                <h1 className={`text-md font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>HTML5 CSS3 JavascriptES6</h1>
-              </div>
-            </div>
-            </a>
-
-            <a>
-            <div
-              className="ui-ux-design w-80 flex flex-col gap-3 p-5 rounded-lg"
-              style={{background:`${bgcolor==="white" ? "#FFF4F4" :"black"}`,  border:`${bgcolor==="white" ? "none" :"1px solid #A6A6A6"}`}}
-            >
-              <img
-                src={reactjs}
-                className="rounded-lg transition delay-150"
-              />
-              <div>
-
-                <h1 className={`text-md font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>Reactjs</h1>
-              </div>
-            </div>
-            </a>
-          </div>
+        <div className="w-full flex flex-wrap gap-4">
+           {
+            skills.map((curr,i)=> 
+            <div key={i} className="w-[7rem] text-center h-[7rem] rounded-full flex flex-col">
+            <img src={curr.png} className="w-full p-5"/>
+            <h1 className={`font-bold ${
+            bgcolor === "white" ? "text-black" : "text-white"
+          }`}>{curr.skill}</h1>
+         </div>)
+           }
         </div>
+
+
+
+        <h1
+          className={`text-3xl font-bold ${
+            bgcolor === "white" ? "text-black" : "text-white"
+          }`}
+        >
+          Other Skills
+        </h1>
+
+
+        <div className="w-full flex flex-wrap gap-4">
+        {
+            otherSkills.map((curr,i)=> 
+            <div key={i} className="w-[7rem] text-center h-[7rem] rounded-full flex flex-col">
+            <img src={curr.png} className="w-full p-5"/>
+            <h1 className={`font-bold ${
+            bgcolor === "white" ? "text-black" : "text-white"
+          }`}>{curr.skill}</h1>
+         </div>)
+           }
+        </div>
+
+        
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Certificate
+export default Certificate;

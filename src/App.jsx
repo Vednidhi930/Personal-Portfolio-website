@@ -9,11 +9,24 @@ import Contact from "./Components/Contact";
 import Projects from "./Components/Projects";
 import ForMobile from "./Components/ForMobile";
 import Certificate from "./Components/Certificate";
+import Home from "./Components/Home";
 
 function App() {
+
   const [show, setShow] = useState(false);
   const [darkmode, setDarkmode] = useState("light");
   const [bgcolor, setBgcolor] = useState("white");
+  const[cross,setCross]=useState(false)
+
+  const handleclick=()=>{
+    setShow(true)
+    setCross(true)
+  }
+
+  const handleremove=()=>{
+    setCross(false)
+    setShow(false)
+  }
 
 
   const handleDarkMode = () => {
@@ -39,32 +52,51 @@ function App() {
           darkmode={darkmode}
           setDarkmode={setDarkmode}
           handleDarkMode={handleDarkMode}
+          cross={cross}
+          setCross={setCross}
+          handleclick={handleclick}
+          handleremove={handleremove}
         />
-        <div className="flex justify-center gap-7  w-screen h-full  lg:flex-nowrap sm:flex-wrap p-40 ">
-          <Profile
-            show={show}
-            setShow={setShow}
-            darkmode={darkmode}
-            bgcolor={bgcolor}
-          />
-          <Routes>
+        <Routes>
+          <Route path="/" element={<Home 
+             show={show}
+             setShow={setShow}
+             darkmode={darkmode}
+             setDarkmode={setDarkmode}
+             bgcolor={bgcolor}
+             handleDarkMode={handleDarkMode}
+             cross={cross}
+             setCross={setCross}
+             handleclick={handleclick}
+             handleremove={handleremove}
+          
+          />}>
             <Route
-              path="/About"
+              index
               element={<About bgcolor={bgcolor} darkmode={darkmode} />}
             />
-            <Route
+
+            {/* <Route
               path="/Resume"
               element={<Resume bgcolor={bgcolor} darkmode={darkmode} />}
-            />
+            /> */}
+
             <Route
               path="/Contact"
               element={<Contact bgcolor={bgcolor} darkmode={darkmode} />}
             />
-            <Route path="/Projects" element={<Projects bgcolor={bgcolor} darkmode={darkmode} />} />
-            <Route path="/Certify" element={<Certificate bgcolor={bgcolor} darkmode={darkmode} />} />
-          </Routes>
-          <Navbar bgcolor={bgcolor} darkmode={darkmode} />
-        </div>
+
+            <Route
+              path="/Projects"
+              element={<Projects bgcolor={bgcolor} darkmode={darkmode} />}
+            />
+
+            <Route
+              path="/Certify"
+              element={<Certificate bgcolor={bgcolor} darkmode={darkmode} />}
+            />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   );

@@ -29,9 +29,9 @@ const handlecolorMessage = () => {
 const Contact = ({ bgcolor, darkmode }) => {
   return (
     <>
-      <div className="about p-3 relative aboutus">
+      {/* <div className="about p-3 relative aboutus"> */}
         <div
-          className={`content-width  ${
+          className={` ${
             darkmode === "dark" ? `bg-${bgcolor}` : `bg-white`
           } p-10 rounded-lg flex flex-col gap-10`}
         >
@@ -43,7 +43,7 @@ const Contact = ({ bgcolor, darkmode }) => {
           </h1>
 
           <div
-            className="flex flex-col lg:w-11/12 sm:w-screen gap-2 p-5 rounded-lg"
+            className="flex flex-col lg:w-11/12 sm:w-full gap-2 p-5 rounded-lg"
             style={{
               background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
             }}
@@ -156,7 +156,7 @@ const Contact = ({ bgcolor, darkmode }) => {
             </form>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

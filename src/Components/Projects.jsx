@@ -11,8 +11,8 @@ import project3 from "../Components/SocialLinks/text analyzer ss.png"
 const Projects = ({bgcolor,darkmode}) => {
   return (
     <>
-      <div className="about p-3 relative   aboutus">
-        <div className={`content-width  ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
+      {/* <div className="p-3"> */}
+        <div className={` ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
           <h1 className={`text-3xl font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>Projects</h1>
 
           <div className="flex gap-5 flex-wrap my-5">
@@ -64,7 +64,7 @@ const Projects = ({bgcolor,darkmode}) => {
             </a>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

@@ -6,8 +6,8 @@ import "../Components/Global.css";
 const Resume = ({bgcolor,darkmode}) => {
   return (
     <>
-      <div className="about p-3 relative aboutus">
-        <div className={`content-width ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
+      {/* <div className="about p-3 "> */}
+        <div className={` ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
           <h1  className={`text-3xl font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`} >Resume</h1>
 
           <div className="Education flex items-center gap-1 my-4">
@@ -44,14 +44,14 @@ const Resume = ({bgcolor,darkmode}) => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <div className="Education flex items-center gap-1 my-4">
               <AiOutlineFileDone className="text-3xl text-blue-500" />
               <h1 className={`text-2xl my-2 font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>Key Skills</h1>
             </div>
-          </div>
+          </div> */}
 
-          <div className="flex w-10/12 flex-wrap gap-2 p-5">
+          {/* <div className="flex w-10/12 flex-wrap gap-2 p-5">
                 <div
                   className="passion lg:w-4/12 h-8 p-2"
                   style={{ background: `${bgcolor==="white" ? "#f3f6f6" : "#1D1D1D"}`}}
@@ -105,9 +105,9 @@ const Resume = ({bgcolor,darkmode}) => {
                     Reactjs
                   </h1>
                 </div>
-              </div>
+              </div> */}
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

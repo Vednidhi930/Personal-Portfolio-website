@@ -9,3 +9,20 @@ html,body{
    color: blue;
    background-color: blue;
 }
+
+.homepage{
+   height: calc(100vh-70px);
+}
+
+::-webkit-scrollbar{
+   width: 0px;
+   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track{
+   background: #F0F4F9     
+}
+
+::-webkit-scrollbar-thumb{
+   background:black
+}
